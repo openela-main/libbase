@@ -1,6 +1,6 @@
 Name: libbase
 Version: 1.1.3
-Release: 31%{?dist}
+Release: 32%{?dist}
 Summary: JFree Base Services
 License: LGPLv2
 #Original source: http://downloads.sourceforge.net/jfreereport/%%{name}-%%{version}.zip
@@ -57,6 +57,11 @@ cp -rp bin/javadoc/docs/api $RPM_BUILD_ROOT%{_javadocdir}/%{name}
 %{_javadocdir}/%{name}
 
 %changelog
+* Tue Jul 07 2026 RHEL Packaging Agent <redhat-ymir-agent@redhat.com> - 1.1.3-32
+- Update javac source/target from 1.6 to 1.8 for java-17-openjdk
+  compatibility
+- Resolves: RHEL-192541
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 1.1.3-31
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
